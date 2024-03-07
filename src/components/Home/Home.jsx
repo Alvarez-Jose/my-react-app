@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Home.css';  // Import the styles for this component
 import HomeBackground from './HomeBackGround';
+import ToggleButton from '../Common/ToggleButton';
 
 const Home = () => {
   const location = useLocation();
@@ -18,22 +19,23 @@ const Home = () => {
       <div className="content">
         <h1>Welcome to My Portfolio</h1>
         <p>Choose your preferred view:</p>
-        <div>
-          <Link to="/casual">
-            <button>Casual</button>
+      </div>
+      <div className="button-container">
+          {/* Independent duo buttons */}
+          <Link to="/casual" className="duo-button">
+            Casual
           </Link>
-          <Link to="/professional">
-            <button>Professional</button>
+          <Link to="/professional" className="duo-button">
+            Professional
           </Link>
         </div>
-      </div>
 
       {/* Include the provided HTML structure */}
       <link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css' />
       <canvas className="container" id="container" role="main"></canvas>
       <div className="content">
         <h1 className="title">Antonio Alvarez</h1>
-        <p className="desc">Ambitious Software Engineer.</p>
+        <p className="desc">Driven by Innovation in Software Engineering.</p>
         <ul className="contact">
           <li><a href="mailto:j.alvarezmaciel2@gmail.com">j.alvarezmaciel2@gmail.com</a></li>
           <li><a target="_top" href="https://github.com/Alvarez-Jose">GitHub</a></li>

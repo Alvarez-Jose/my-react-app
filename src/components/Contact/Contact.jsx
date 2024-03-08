@@ -1,13 +1,14 @@
 // src/components/Contact/Contact.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Contact.css';
+import NavbarCasual from '../NavBar/NavbarCasual';
 
 const Contact = () => {
     return(
         <div>
-        <h1>Contact</h1>
-    </div>
+         {/* Include NavbarCasual */}
+        <NavbarCasual />
+        <h1>Test Contact</h1>
+        </div>
     );
 };
 

@@ -1,7 +1,8 @@
 // src/components/Navbar/NavbarCasual.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'
+import './NavBar.css';
+
 
 const NavbarCasual = () => {
   return (
@@ -11,16 +12,16 @@ const NavbarCasual = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="../Resume/Resume.jsx">Resume</Link>
+          <Link to="/ResumeAndCertificates">Resume And Certificates</Link>
         </li>
         <li>
-          <Link to="../Portfolio/Portfolio.jsx">Portfolio</Link>
+          <Link to="/Portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link to="../AboutMe/AboutMe.jsx">About me</Link>
+          <Link to="/AboutMe">About me</Link>
         </li>
         <li>
-          <Link to="../Contact/Contact.jsx">Contact</Link>
+          <Link to="/Contact">Contact</Link>
         </li>
       </ul>
     </nav>

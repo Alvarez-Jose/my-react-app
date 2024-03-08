@@ -1,20 +1,47 @@
 /* src/components/Navbar/Navbar.css */
+
 .navbar {
   background-color: #333;
   padding: 10px;
+  position: relative; /* Add this line to make position:relative */
 }
 
+/* Adjust the following styles to create space for the button in the navbar */
 ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  margin-right: 50px; /* Adjust the margin as needed */
+  opacity: 1; /* Initial opacity set to 1 */
+  animation: bubble-fade 0.3s ease; /* Apply the bubble-fade animation */
+}
+
+@keyframes bubble-fade {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
 }
 
 li {
-  margin-right: 20px;
+  margin-right: 70px; /* Adjust the initial margin as needed */
+  transition: margin-right 0.3s ease; /* Add a smooth transition for margin-right */
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+/* Add the following styles for the toggle button */
+.toggle-button-container {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right position as needed */
+  transform: translateY(-50%);
+  z-index: 1000;
 }

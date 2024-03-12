@@ -11,7 +11,7 @@ ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  margin-right: 50px; /* Adjust the margin as needed */
+  margin-right: 80px; /* Adjust the margin as needed */
   opacity: 1; /* Initial opacity set to 1 */
   animation: bubble-fade 0.3s ease; /* Apply the bubble-fade animation */
 }

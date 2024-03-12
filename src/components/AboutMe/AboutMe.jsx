@@ -4,14 +4,16 @@ import NavbarCasual from '../NavBar/NavbarCasual';
 
 const AboutMe = () => {
   return (
+    <div>
+      {/* Include NavbarCasual in your overall layout */}
+      
       <div>
-        {/* Include NavbarCasual */}
-         <NavbarCasual />
-        <h1>Test AboutMe</h1>
+        <h1>Test About Me</h1>
         {/* Add the content specific to the AboutMe route here */}
       </div>
-   
+    </div>
   );
 };
 
 export default AboutMe;
+

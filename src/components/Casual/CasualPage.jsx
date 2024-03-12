@@ -1,17 +1,15 @@
-// src/components/Casual/Casual.jsx
-import React from "react";
-import { Link } from 'react-router-dom';
+// CasualPage.js
+import React from 'react';
+import NavbarCasual from '../NavBar/NavbarCasual';
 import ToggleButton from '../Common/ToggleButton';
-import './CasualPage.css';
 
 const CasualPage = () => {
-    return(
-        <div>
-            <h1>Casual Page</h1>
-            {/* Adding the toggle button here */}
-            <ToggleButton to="/professional" label="Switch to Professional" />
-        </div>
-    );
+  return (
+    <div>
+      <h1>Test</h1>
+      <ToggleButton to="/professional" label="Switch to Professional" />
+    </div>
+  );
 };
 
 export default CasualPage;

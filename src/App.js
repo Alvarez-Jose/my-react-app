@@ -1,4 +1,4 @@
-// src/App.jsx
+//App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
@@ -15,40 +15,31 @@ import Skills from './components/Skills/Skills';
 import Services from './components/Services/Services';
 
 
+
 const App = () => {
   return (
     <Router>
-      <div>
-        {/* Conditionally render the Navbar based on the route */}
-        <Routes>
+      <Routes>
           <Route path="/casual/*" element={<AppWithNavbar navbar={<NavbarCasual />} />} />
           <Route path="/professional/*" element={<AppWithNavbar navbar={<NavbarProfessional />} />} />
           <Route path="/Portfolio/*" element={<Portfolio /> } />
-        </Routes>
+      </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      {/*Casual routes */}  
+      <Route path="/casual/*" element={<CasualPage />} />
+      <Route path="/casual/ResumeAndCertificates/*" element={<ResumeAndCertificates />} />
+      <Route path="/casual/Portfolio/*" element={<Portfolio isProfessional={false} />} />
+      <Route path="/casual/AboutMe/*" element={<AboutMe />} />
+      <Route path="/casual/Contact/*" element={<Contact />} />
 
-        {/* Define your other routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/casual" element={<CasualPage />} />
-          <Route path="/professional" element={<ProfessionalPage />} />
-          <Route path="/casual/Portfolio/*" element={<Portfolio navbar={<NavbarCasual />} />} />
-          <Route path="/professional/Portfolio/*" element={<Portfolio navbar={<NavbarProfessional />} />} />
-          <Route path="/ResumeAndCertificates/*" element={<ResumeAndCertificates />} />
-          <Route path="/AboutMe/*" element={<AboutMe />} />
-          <Route path="/Contact/*" element={<Contact />} />
-          <Route path="/Skills/*" element={<Skills />} />
-          <Route path="/Services/*" element={<Services />} />
-          {/* ... other routes */}
-          <Route path="/Protfolio/*" element={<Portfolio />} />
-          <Route path="/casual" element={<CasualPage />} />
-          <Route path="/professional" element={<ProfessionalPage />} />
-          <Route path="/ResumeAndCertificates/*" element={<ResumeAndCertificates />} />
-          <Route path="/AboutMe/*" element={<AboutMe />} />
-          <Route path="/Contact/*" element={<Contact />} />
-          <Route path="/Skills/*" element={<Skills />} />
-          <Route path="/Services/*" element={<Services />} />
-        </Routes>
-      </div>
+      {/*Professional routes */}
+      <Route path="/professional/*" element={<ProfessionalPage />} />
+      <Route path="/professional/Portfolio/*" element={<Portfolio isProfessional={true} />} />
+      <Route path="/professional/Services/*" element={<Services />} />
+      <Route path="/professional/Skills/*" element={<Skills />} />
+      <Route path="/professional/Contact/*" element={<Contact />} />
+      </Routes>
     </Router>
   );
 };

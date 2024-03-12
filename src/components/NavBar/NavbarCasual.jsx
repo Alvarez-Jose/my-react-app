@@ -6,24 +6,14 @@ import './NavBar.css';
 
 const NavbarCasual = () => {
   return (
-    <nav className="navbar">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/ResumeAndCertificates">Resume And Certificates</Link>
-        </li>
-        <li>
-          <Link to="/Portfolio">Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/AboutMe">About me</Link>
-        </li>
-        <li>
-          <Link to="/Contact">Contact</Link>
-        </li>
-      </ul>
+    <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="ResumeAndCertificates">Resume and Certificates</Link></li>
+          <li><Link to="Portfolio">Portfolio</Link></li>
+          <li><Link to="AboutMe">About Me</Link></li>
+          <li><Link to="Contact">Contact</Link></li>
+        </ul>
     </nav>
   );
 };
